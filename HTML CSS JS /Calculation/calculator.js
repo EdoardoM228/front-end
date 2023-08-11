@@ -32,9 +32,9 @@ plusButton.addEventListener("click", plus);
 minusButton.addEventListener("click", minus);
 ymnojenieButton.addEventListener("click", ymnojenie);
 delenieButton.addEventListener("click", delenie);
-ravnoButton.addEventListener("click",ravno);
+ravnoButton.addEventListener("click", ravno);
 
-function hui(){
+function hui() {
     let screvaginaen = document.querySelector("#calculatorScreen");
     screvaginaen.value = null;
 }
