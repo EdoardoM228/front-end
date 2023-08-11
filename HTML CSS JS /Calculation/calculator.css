@@ -1,0 +1,23 @@
+.input,
+.labelForInput{
+    margin: 10px;
+}
+.input:hover{
+    border-color: aqua;
+    box-shadow: 0px 0px 10px 1px aqua;
+}
+button{
+    margin:10px;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content:center;
+    align-items:center;
+}
+.numberButton{
+    padding: 60px;
+}
+.test{
+    grid-row-start: 4;
+}
