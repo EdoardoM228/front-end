@@ -1,57 +1,3 @@
-// let plusButton = document.querySelector("#plus");
-// let minusButton = document.querySelector("#minus");
-// let ymnojenieButton = document.querySelector("#ymnojenie");
-// let delenieButton = document.querySelector("#delenie");
-// let input1 = document.querySelector("#firstNumber");
-// let input2 = document.querySelector("#secondNumber");
-
-// plusButton.addEventListener("click", summa);
-// minusButton.addEventListener("click", raznosti);
-// ymnojenieButton.addEventListener("click", proizvedenie);
-// delenieButton.addEventListener("click", delenie);
-
-// function validation() {
-//     if (input1.value == 0 && input2.value == 0) {
-//         input1.classList.add("test");
-//         input2.classList.add("test");
-//     }
-//     else if (input1.value == 0) {
-//         input2.classList.remove("test");
-//         input1.classList.add("test");
-//     }
-//     else if (input2.value == 0) {
-//         input2.classList.add("test");
-//         input1.classList.remove("test");
-//     }
-//     else {
-//         input1.classList.remove("test");
-//         input2.classList.remove("test");
-//     }
-// }
-
-// function summa() {
-//     validation();
-//     let summa = Number(input1.value) + Number(input2.value);
-//     alert(summa);
-// }
-
-// function raznosti() {
-//     validation();
-//     let raznosti = input1.value - input2.value;
-//     alert(raznosti);
-// }
-
-// function proizvedenie() {
-//     validation();
-//     let proizvedenie = input1.value * input2.value;
-//     alert(proizvedenie);
-// }
-
-// function delenie() {
-//     validation();
-//     let delenie = input1.value / input2.value;
-//     alert(delenie);
-// }
 let clearScreenButton = document.querySelector("#clearScreen");
 let plusButton = document.querySelector("#plus");
 let minusButton = document.querySelector("#minus");
@@ -71,7 +17,7 @@ let nineButton = document.querySelector("#nine");
 let pizda;
 let klitor;
 
-clearScreenButton.addEventListener("click", clearScreen);
+clearScreenButton.addEventListener("click", hui);
 zeroButton.addEventListener("click", zero);
 oneButton.addEventListener("click", one);
 twoButton.addEventListener("click", two);
@@ -88,31 +34,26 @@ ymnojenieButton.addEventListener("click", ymnojenie);
 delenieButton.addEventListener("click", delenie);
 ravnoButton.addEventListener("click",ravno);
 
-let test = plus();
-let testHuinea = test.huinea;
-let testVagina = test.vagina;
-
-function clearScreen(){
-    let screen = document.querySelector("#calculatorScreen");
-    screen.value = null;
+function hui(){
+    let screvaginaen = document.querySelector("#calculatorScreen");
+    screvaginaen.value = null;
 }
-
 function ravno() {
     let test = document.querySelector("#calculatorScreen");
     let hui = test.value;
     let zalypa = 0;
     switch (klitor) {
         case "+":
-            zalypa = Number(hui) + pizda;
+            zalypa = pizda + Number(hui);
             break;
         case "-":
-            zalypa = Number(hui) - pizda;
+            zalypa = pizda - Number(hui);
             break;
         case "*":
-            zalypa = Number(hui) * pizda;
+            zalypa = pizda * Number(hui);
             break;
         case "/":
-            zalypa = Number(hui) / pizda;
+            zalypa = pizda / Number(hui);
             break;
     }
     test.value = zalypa;
