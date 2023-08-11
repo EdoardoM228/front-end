@@ -14,10 +14,10 @@ let sixButton = document.querySelector("#six");
 let sevenButton = document.querySelector("#seven");
 let eightButton = document.querySelector("#eight");
 let nineButton = document.querySelector("#nine");
-let pizda;
-let klitor;
+let firstNumber;
+let symbol;
 
-clearScreenButton.addEventListener("click", hui);
+clearScreenButton.addEventListener("click", clearScreen);
 zeroButton.addEventListener("click", zero);
 oneButton.addEventListener("click", one);
 twoButton.addEventListener("click", two);
@@ -34,61 +34,61 @@ ymnojenieButton.addEventListener("click", ymnojenie);
 delenieButton.addEventListener("click", delenie);
 ravnoButton.addEventListener("click", ravno);
 
-function hui() {
-    let screvaginaen = document.querySelector("#calculatorScreen");
-    screvaginaen.value = null;
+function clearScreen() {
+    let screen = document.querySelector("#calculatorScreen");
+    screen.value = null;
 }
 function ravno() {
-    let test = document.querySelector("#calculatorScreen");
-    let hui = test.value;
-    let zalypa = 0;
-    switch (klitor) {
+    let screen = document.querySelector("#calculatorScreen");
+    let secondNumber = screen.value;
+    let result = 0;
+    switch (symbol) {
         case "+":
-            zalypa = pizda + Number(hui);
+            result = firstNumber + Number(secondNumber);
             break;
         case "-":
-            zalypa = pizda - Number(hui);
+            result = firstNumber - Number(secondNumber);
             break;
         case "*":
-            zalypa = pizda * Number(hui);
+            result = firstNumber * Number(secondNumber);
             break;
         case "/":
-            zalypa = pizda / Number(hui);
+            result = firstNumber / Number(secondNumber);
             break;
     }
-    test.value = zalypa;
+    screen.value = result;
 }
 
 function plus() {
-    let test = document.querySelector("#calculatorScreen");
-    let vagina = Number(test.value);
-    pizda = Number(vagina);
-    klitor = "+";
-    test.value = null;
+    let screen = document.querySelector("#calculatorScreen");
+    let screenNumber = Number(screen.value);
+    firstNumber = Number(screenNumber);
+    symbol = "+";
+    screen.value = null;
 }
 
 function minus() {
-    let test = document.querySelector("#calculatorScreen");
-    let vagina = Number(test.value);
-    pizda = Number(vagina);
-    klitor = "-";
-    test.value = null;
+    let screen = document.querySelector("#calculatorScreen");
+    let screenNumber = Number(screen.value);
+    firstNumber = Number(screenNumber);
+    symbol = "-";
+    screen.value = null;
 }
 
 function ymnojenie() {
-    let test = document.querySelector("#calculatorScreen");
-    let vagina = Number(test.value);
-    pizda = Number(vagina);
-    klitor = "*"
-    test.value = null;
+    let screen = document.querySelector("#calculatorScreen");
+    let screenNumber = Number(screen.value);
+    firstNumber = Number(screenNumber);
+    symbol = "*";
+    screen.value = null;
 }
 
 function delenie() {
-    let test = document.querySelector("#calculatorScreen");
-    let vagina = Number(test.value);
-    pizda = Number(vagina);
-    klitor = "/";
-    test.value = null;
+    let screen = document.querySelector("#calculatorScreen");
+    let screenNumber = Number(screen.value);
+    firstNumber = Number(screenNumber);
+    symbol = "/";
+    screen.value = null;
 }
 function zero() {
     let screen = document.querySelector("#calculatorScreen");
